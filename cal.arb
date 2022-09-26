@@ -1,0 +1,34 @@
+puts '==========CALCTULATOR 1.0=========='
+loop do 
+puts 'ENTER FIRST NUMBER:'
+first = gets.to_i
+puts 'ENTER SECOND NUMBER:'
+second = gets.to_i
+
+puts 'CHOOSE OPERATION (+ - * /)'
+operation = gets.chomp
+
+puts 'YOUR RESULT:'
+case operation
+when '+'
+  puts first + second1
+when '-'
+  puts first - second
+when '*'
+  puts first * second
+when '/'
+  begin
+    puts first / second
+  rescue ZeroDivisionError
+    puts 'ERROR: DIVISION BY ZERO'
+  end
+else
+  puts 'SORRY, TRY AGAIN'
+end
+
+puts 'CONTINUE? (Yes - 0, Exit - 1)'
+choose = gets.to_i
+if (choose == 1)
+    break
+end
+end
